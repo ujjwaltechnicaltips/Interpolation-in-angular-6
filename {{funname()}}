@@ -1,0 +1,33 @@
+
+app.component.ts
+---------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'proj';
+
+ujjwal:string = 'UJJWAL';
+technical:string ='TECHNICAL';
+tips:string ='TIPS';
+multipleclass:string = 'fontcolor bgcolor';
+
+funname():string 
+{
+return this.ujjwal + this.technical;
+}
+
+}
+
+app.component.html
+---------------------
+<div class="container">
+<p [ngStyle]="{'color':'red','font-size':'45px','text-align':'center'}"> {{ujjwal + " " + technical + " " + tips}}</p>
+<p [class]="multipleclass"> Hello there! I’m a Front End Web Developer living in Noida, India. I have been passionate about Coding. </p>
+</div>
+
+<h1>{{funname()}}</h1>
